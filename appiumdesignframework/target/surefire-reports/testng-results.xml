@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-25T11:14:38 IST" name="Suite" finished-at="2022-08-25T11:18:16 IST" duration-ms="218274">
+    <groups>
+      <group name="Smoke">
+        <method signature="eCommerenceTest1.FillForm_ErrorMessage()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" name="FillForm_ErrorMessage" class="Appium.appiumframewokdesign.eCommerenceTest1"/>
+        <method signature="eCommerenceTest1.FillForm_PositiveFlow()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" name="FillForm_PositiveFlow" class="Appium.appiumframewokdesign.eCommerenceTest1"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2022-08-25T11:14:38 IST" name="Error Test1" finished-at="2022-08-25T11:17:14 IST" duration-ms="156772">
+      <class name="Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid">
+        <test-method is-config="true" signature="start()[pri:0, instance:Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid@3fc9504b]" started-at="2022-08-25T11:14:38 IST" name="start" finished-at="2022-08-25T11:14:56 IST" duration-ms="18838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method is-config="true" signature="homePage()[pri:0, instance:Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid@3fc9504b]" started-at="2022-08-25T11:14:57 IST" name="homePage" finished-at="2022-08-25T11:15:02 IST" duration-ms="4383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid@3fc9504b]" started-at="2022-08-25T11:15:02 IST" name="FillForm" data-provider="getData" finished-at="2022-08-25T11:16:09 IST" duration-ms="67414" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=rahul shetty, country=Argentina, gender=male}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm -->
+        <test-method is-config="true" signature="homePage()[pri:0, instance:Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid@3fc9504b]" started-at="2022-08-25T11:16:09 IST" name="homePage" finished-at="2022-08-25T11:16:14 IST" duration-ms="4965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid@3fc9504b]" started-at="2022-08-25T11:16:14 IST" name="FillForm" data-provider="getData" finished-at="2022-08-25T11:17:14 IST" duration-ms="60429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=rahul shetty, country=Argentina, gender=female}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm -->
+      </class> <!-- Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid -->
+    </test> <!-- Error Test1 -->
+    <test started-at="2022-08-25T11:17:16 IST" name="Error Test" finished-at="2022-08-25T11:18:16 IST" duration-ms="60250">
+      <class name="Appium.appiumframewokdesign.eCommerenceTest1">
+        <test-method is-config="true" signature="start()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" started-at="2022-08-25T11:17:16 IST" name="start" finished-at="2022-08-25T11:17:37 IST" duration-ms="21494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method is-config="true" signature="homePage()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" started-at="2022-08-25T11:17:37 IST" name="homePage" finished-at="2022-08-25T11:17:43 IST" duration-ms="5583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method signature="FillForm_ErrorMessage()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" started-at="2022-08-25T11:17:43 IST" name="FillForm_ErrorMessage" finished-at="2022-08-25T11:17:51 IST" duration-ms="8637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm_ErrorMessage -->
+        <test-method is-config="true" signature="homePage()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" started-at="2022-08-25T11:17:51 IST" name="homePage" finished-at="2022-08-25T11:17:56 IST" duration-ms="5028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method signature="FillForm_PositiveFlow()[pri:0, instance:Appium.appiumframewokdesign.eCommerenceTest1@460ebd80]" started-at="2022-08-25T11:17:56 IST" name="FillForm_PositiveFlow" finished-at="2022-08-25T11:18:16 IST" duration-ms="19492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm_PositiveFlow -->
+      </class> <!-- Appium.appiumframewokdesign.eCommerenceTest1 -->
+    </test> <!-- Error Test -->
+  </suite> <!-- Suite -->
+</testng-results>

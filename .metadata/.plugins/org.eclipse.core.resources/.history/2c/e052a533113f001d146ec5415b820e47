@@ -1,0 +1,48 @@
+package Appium.GmailAutomatioapp;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumBy;
+
+public class DemoTest extends BasicConfiguration {
+
+	String selectmail="dineshparate25@gmail.com";
+	public void addmail(String selectmail)
+	{
+		driver.findElement(By.id("com.google.android.gm:id/setup_addresses_add_another")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Google']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		wait.until(ExpectedConditions.attributeContains(
+				driver.findElement(By.id("learnMore")), "text", "Cart"));	
+		
+	}
+	public void selectmail(String selectmail)
+	{
+		
+	}
+	public void takeToGmail()
+	{
+		driver.findElement(By.id("com.google.android.gm:id/action_done")).click();
+		if (driver.findElement(By.id("android:id/message")).isDisplayed()) {
+			driver.findElement(By.xpath("//android.widget.Button[@text='OK']")).click();
+			addmail(selectmail);
+		}
+		
+	}
+	@Test
+	public void sendMail() {
+		try {
+			driver.findElement(AppiumBy.id("com.google.android.gm:id/welcome_tour_got_it")).click();
+			takeToGmail();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+//com.google.android.gm:id/welcome_tour_got_it
+}

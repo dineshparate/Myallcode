@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-19T11:31:20 IST" name="Default suite" finished-at="2022-09-19T11:32:22 IST" duration-ms="62239">
+    <groups>
+    </groups>
+    <test started-at="2022-09-19T11:31:20 IST" name="Default test" finished-at="2022-09-19T11:32:22 IST" duration-ms="62239">
+      <class name="General_store.Test.DemoTest">
+        <test-method is-config="true" signature="start()[pri:0, instance:General_store.Test.DemoTest@8462f31]" started-at="2022-09-19T11:31:20 IST" name="start" finished-at="2022-09-19T11:31:39 IST" duration-ms="19467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="formPage()[pri:0, instance:General_store.Test.DemoTest@8462f31]" started-at="2022-09-19T11:31:39 IST" name="formPage" finished-at="2022-09-19T11:32:22 IST" duration-ms="42673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formPage -->
+      </class> <!-- General_store.Test.DemoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

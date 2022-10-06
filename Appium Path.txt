@@ -1,0 +1,17 @@
+Set Android Sdk path: 
+	1. Enviorment Variable->Click on New->Type ANDROID_HOME in variable box->
+	2.Paste the following path in variable value: C:\Users\Dinesh.P\AppData\Local\Android\Sdk
+
+In Path variable 
+	C:\Users\Dinesh.P\AppData\Local\Android\Sdk\tools\bin
+	C:\Users\Dinesh.P\AppData\Local\Android\Sdk\tools
+	C:\Users\Dinesh.P\AppData\Local\Android\Sdk\platform-tools
+	C:\Program Files\nodejs\node_modules\npm\bin
+
+Set Node Module Path
+	1. Enviorment Variable->Click on New->Type NODE_HOME in variable box->
+	2.Paste the following path in variable value:-C:\Program Files\nodejs
+
+
+	
+	

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Appium.TodoList.ToDoTaskList">
+        <methods>
+          <include name="CreateTask"/>
+          <include name="configure"/>
+          <include name="taskoperation"/>
+          <include name="start"/>
+          <include name="deleteallCompletedTask"/>
+        </methods>
+      </class> <!-- Appium.TodoList.ToDoTaskList -->
+      <class name="Appium.TodoList.ToDoList">
+        <methods>
+          <include name="CreateNewList"/>
+          <include name="RenameList"/>
+          <include name="configure"/>
+          <include name="DeleteList"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- Appium.TodoList.ToDoList -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,14 @@
+package Appium.TodoList.PageObject;
+
+import org.testng.annotations.Test;
+
+import testData.BaseTest;
+
+public class FrontPage extends GoogleTasksList{
+
+	@Test
+	public void StartPage()
+	{
+		
+	}
+}

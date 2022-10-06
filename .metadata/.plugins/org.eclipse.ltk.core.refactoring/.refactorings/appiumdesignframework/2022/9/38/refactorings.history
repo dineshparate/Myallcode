@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;General-Store.apk&apos; to &apos;General-StoreApk/src/test/java/resources&apos;&#x0D;&#x0A;- Original project: &apos;appiumdesignframework&apos;&#x0D;&#x0A;- Destination element: &apos;General-StoreApk/src/test/java/resources&apos;&#x0D;&#x0A;- Original element: &apos;General-Store.apk&apos;" description="Copy file" destination="=General-StoreApk/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;resources" element1="src/test/java/resources/General-Store.apk" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1663305696565" units="0" version="1.0"/>
+</session>

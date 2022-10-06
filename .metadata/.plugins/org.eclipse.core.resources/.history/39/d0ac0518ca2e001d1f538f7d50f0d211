@@ -1,0 +1,141 @@
+package Appium.TodoList.PageObject;
+
+import java.awt.Dimension;
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+
+public class TaskListOperation extends ToDoListOperation {
+
+	AndroidDriver driver;
+
+	public TaskListOperation(AndroidDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	}
+
+	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc='Create new task']")
+	public WebElement clicknewtaskicon;
+
+	@AndroidFindBy(id = "com.google.android.apps.tasks:id/add_task_title")
+	public WebElement newtask;
+
+	@AndroidFindBy(id = "com.google.android.apps.tasks:id/add_task_done")
+	public WebElement savebutton;
+
+	public void selectlist(String text) {
+		try {
+
+			driver.findElement(AppiumBy.androidUIAutomator(
+					"new UiScrollable(new UiSelector().resourceId(\"com.google.android.apps.tasks:id/tabs\")).setAsHorizontalList().scrollIntoView("
+							+ "new UiSelector().description(\"" + text + "\"))"));
+			driver.findElement(AppiumBy.accessibilityId(text)).click();
+
+		} catch (Exception e) {
+			System.out.println("No such list present");
+		}
+	}
+
+	public void createtask(String selectlisttext, String createlisttext) {
+		selectlist(selectlisttext);
+		clicknewtaskicon.click();
+		newtask.sendKeys(createlisttext);
+		savebutton.click();
+	}
+
+	public void completedtask(String selectlisttext, String deletetasktext) throws InterruptedException {
+
+		try {
+			selectlist(selectlisttext);
+
+			List<WebElement> elements = driver.findElement(By.id("com.google.android.apps.tasks:id/tasks_list"))
+					.findElements(By.id("com.google.android.apps.tasks:id/task_item_layout"));
+			boolean flag = false;
+			do {
+				for (WebElement e : elements) {
+					System.out.println(e.getAttribute("content-desc"));
+					System.out.println(deletetasktext);
+					if (e.getAttribute("content-desc").equalsIgnoreCase(deletetasktext)) {
+						flag = true;
+						break;
+					}
+
+				}
+				if (!flag) {
+					scroll(0.5, 0.8, 0.5, 0.2);
+				}
+
+			} while (!flag);
+
+			// driver.findElement(By.xpath("//android.widget.FrameLayout[@content-desc=" +
+			// deletetasktext + "]/android.view.ViewGroup")).click();
+			// driver.findElement(By.id("com.google.android.apps.tasks:id/edit_task_complete_button")).click();
+//			WebElement ele=driver.findElement(AppiumBy.androidUIAutomator(
+//					"new UiScrollable(new UiSelector().resourceId(\"com.google.android.apps.tasks:id/tasks_list\")).scrollIntoView("
+////					+ "new UiSelector().description(\"Firsttask\"))"));	
+//			driver.findElement(AppiumBy.androidUIAutomator(
+//					"new UiScrollable(new UiSelector().resourceId(\"com.google.android.apps.tasks:id/tasks_list\")).getChildByText("
+//					+ "new UiSelector().className(\"android.widget.TextView\"), \"Aa\")"));
+
+			/*
+			 * List<WebElement> elements=driver.findElement(By.id(
+			 * "com.google.android.apps.tasks:id/tasks_list")).findElements(By.id(
+			 * "com.google.android.apps.tasks:id/task_item_layout")); for(WebElement element
+			 * : elements) { if System.out.println(element.getAttribute("content-desc")); }
+			 */
+			// ele.click();
+
+		} catch (Exception e) {
+			List<WebElement> elements = driver.findElement(By.id("com.google.android.apps.tasks:id/tasks_list"))
+					.findElements(By.id("com.google.android.apps.tasks:id/task_item_layout"));
+			boolean flag = false;
+			do {
+				for (WebElement e1 : elements) {
+					System.out.println(e1.getAttribute("content-desc"));
+					System.out.println(deletetasktext);
+					if (e1.getAttribute("content-desc").equalsIgnoreCase(deletetasktext)) {
+						flag = true;
+						break;
+					}
+
+				}
+				if (!flag) {
+					scroll(0.5, 0.8, 0.5, 0.2);
+				}
+
+			} while (!flag);
+
+
+		}
+
+	}
+
+	public void scroll(double start_xd, double start_yd, double end_xd, double end_yd) throws InterruptedException {
+
+		org.openqa.selenium.Dimension dimension = driver.manage().window().getSize();
+		int start_x = (int) (dimension.width * start_xd);
+		int start_y = (int) (dimension.width * start_yd);
+
+		int end_x = (int) (dimension.width * end_xd);
+		int end_y = (int) (dimension.width * end_yd);
+
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.press(PointOption.point(start_x, start_y))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(end_x, end_y))
+				.release().perform();
+		Thread.sleep(3000);
+	}
+}

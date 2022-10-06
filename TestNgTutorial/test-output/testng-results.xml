@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="12" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-26T16:11:17 IST" name="Loan Department" finished-at="2022-08-26T16:11:17 IST" duration-ms="199">
+    <groups>
+      <group name="Smoke">
+        <method signature="Day1.demo1()[pri:0, instance:test.Day1@37654521]" name="demo1" class="test.Day1"/>
+        <method signature="Day2.demo1()[pri:0, instance:test.Day2@24fcf36f]" name="demo1" class="test.Day2"/>
+        <method signature="Day4.WebloginHomeLoan()[pri:0, instance:test.Day4@10feca44]" name="WebloginHomeLoan" class="test.Day4"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2022-08-26T16:11:17 IST" name="Car Loan" finished-at="2022-08-26T16:11:17 IST" duration-ms="179">
+      <class name="test.Day1">
+        <test-method is-config="true" signature="demo2()[pri:0, instance:test.Day1@37654521]" started-at="2022-08-26T16:11:17 IST" name="demo2" finished-at="2022-08-26T16:11:17 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo2 -->
+        <test-method is-config="true" signature="demo3()[pri:0, instance:test.Day1@37654521]" started-at="2022-08-26T16:11:17 IST" name="demo3" finished-at="2022-08-26T16:11:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo3 -->
+      </class> <!-- test.Day1 -->
+      <class name="test.Day3">
+        <test-method signature="APIAppiumloginCar()[pri:0, instance:test.Day3@5acf93bb]" started-at="2022-08-26T16:11:17 IST" name="APIAppiumloginCar" finished-at="2022-08-26T16:11:17 IST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APIAppiumloginCar -->
+        <test-method signature="APIMobileloginCar(java.lang.String,java.lang.String)[pri:0, instance:test.Day3@5acf93bb]" started-at="2022-08-26T16:11:17 IST" name="APIMobileloginCar" finished-at="2022-08-26T16:11:17 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qaclickacademy.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12356.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APIMobileloginCar -->
+        <test-method signature="APIWebloginCar()[pri:0, instance:test.Day3@5acf93bb]" started-at="2022-08-26T16:11:17 IST" name="APIWebloginCar" finished-at="2022-08-26T16:11:17 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APIWebloginCar -->
+      </class> <!-- test.Day3 -->
+    </test> <!-- Car Loan -->
+    <test started-at="2022-08-26T16:11:17 IST" name="Personal Loan" finished-at="2022-08-26T16:11:17 IST" duration-ms="199">
+      <class name="test.Day1">
+        <test-method signature="demo()[pri:0, instance:test.Day1@37654521]" started-at="2022-08-26T16:11:17 IST" name="demo" finished-at="2022-08-26T16:11:17 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+        <test-method signature="demo1()[pri:0, instance:test.Day1@37654521]" started-at="2022-08-26T16:11:17 IST" name="demo1" finished-at="2022-08-26T16:11:17 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo1 -->
+      </class> <!-- test.Day1 -->
+      <class name="test.Day2">
+        <test-method is-config="true" signature="demo()[pri:0, instance:test.Day2@24fcf36f]" started-at="2022-08-26T16:11:17 IST" name="demo" finished-at="2022-08-26T16:11:17 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+        <test-method signature="demo1()[pri:0, instance:test.Day2@24fcf36f]" started-at="2022-08-26T16:11:17 IST" name="demo1" finished-at="2022-08-26T16:11:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo1 -->
+        <test-method is-config="true" signature="demo()[pri:0, instance:test.Day2@24fcf36f]" started-at="2022-08-26T16:11:17 IST" name="demo" finished-at="2022-08-26T16:11:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+        <test-method signature="demo2()[pri:0, instance:test.Day2@24fcf36f]" started-at="2022-08-26T16:11:17 IST" name="demo2" finished-at="2022-08-26T16:11:17 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo2 -->
+      </class> <!-- test.Day2 -->
+      <class name="test.Day4">
+        <test-method signature="AppiumloginHomeLoan()[pri:0, instance:test.Day4@10feca44]" started-at="2022-08-26T16:11:17 IST" name="AppiumloginHomeLoan" finished-at="2022-08-26T16:11:17 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppiumloginHomeLoan -->
+        <test-method signature="MobileloginHomeLoan()[pri:0, instance:test.Day4@10feca44]" started-at="2022-08-26T16:11:17 IST" name="MobileloginHomeLoan" finished-at="2022-08-26T16:11:17 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileloginHomeLoan -->
+        <test-method signature="WebloginHomeLoan()[pri:0, instance:test.Day4@10feca44]" started-at="2022-08-26T16:11:17 IST" name="WebloginHomeLoan" finished-at="2022-08-26T16:11:17 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebloginHomeLoan -->
+      </class> <!-- test.Day4 -->
+    </test> <!-- Personal Loan -->
+  </suite> <!-- Loan Department -->
+</testng-results>

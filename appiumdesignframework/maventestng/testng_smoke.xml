@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="Smoke"></include>
+		</run>
+	</groups>
+	<listeners>
+		<listener class-name="Appium.appiumframewrokdesign.testData.Listners"></listener>
+	</listeners>
+	<test thread-count="5" name="Error Test1">
+		<classes>
+			<class name="Appium.appiumframewokdesign.eCommerce_tc_4_Hybrid" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Error Test">
+		<classes>
+			<class name="Appium.appiumframewokdesign.eCommerenceTest1" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

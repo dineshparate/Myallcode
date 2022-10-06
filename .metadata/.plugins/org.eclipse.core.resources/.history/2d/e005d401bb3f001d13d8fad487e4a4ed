@@ -1,0 +1,60 @@
+package Appium.GmailAutomatioapp;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.functions.ExpectedCondition;
+
+public class DemoTest extends BasicConfiguration {
+
+	String selectmail = "dineshparate25@gmail.com";
+
+	public void waitforElementToAppear() throws InterruptedException {
+		Thread.sleep(4000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		wait.until(ExpectedConditions.);
+	}
+
+		
+
+	public void addmail(String selectmail) throws InterruptedException {
+		driver.findElement(By.id("com.google.android.gm:id/setup_addresses_add_another")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Google']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		//waitforElementToAppear();
+		
+		driver.findElement(By.id("identifierNext")).click();
+
+	}
+
+	public void selectmail(String selectmail) {
+
+	}
+
+	public void takeToGmail() throws InterruptedException {
+		driver.findElement(By.id("com.google.android.gm:id/action_done")).click();
+		if (driver.findElement(By.id("android:id/message")).isDisplayed()) {
+			driver.findElement(By.xpath("//android.widget.Button[@text='OK']")).click();
+			addmail(selectmail);
+		}
+
+	}
+
+	@Test
+	public void sendMail() {
+		try {
+			driver.findElement(AppiumBy.id("com.google.android.gm:id/welcome_tour_got_it")).click();
+			takeToGmail();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+//com.google.android.gm:id/welcome_tour_got_it
+}
